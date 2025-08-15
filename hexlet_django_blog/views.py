@@ -6,7 +6,7 @@ def index(request):
         request,
         'index.html',
         context={
-            'who': 'World',
+            'app_name': 'Приложение на Django!',
         },
     )
 
