@@ -19,5 +19,5 @@ def about(request):
     )
 
 
-def redirect_view(request):
-    return redirect(reverse('articles', kwargs={'tags': 'Python', 'article_id': 42}))
+# def redirect_view(request):
+#     return redirect(reverse('articles', kwargs={'tags': 'Python', 'article_id': 42}))
