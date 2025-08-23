@@ -98,11 +98,3 @@ class ArticleFormDeleteView(View):
             article.delete()
         messages.success(request, 'Статья успешно удалена.')
         return redirect('articles_index')
-
-
-# class ArticleCommentsView(View):
-#     def post(self, request, *args, **kwargs):
-#         form = ArticleCommentForm(request.POST)
-#         if form.is_valid():
-#             comment = form.save(commit=False)
-#             comment.content = check_for_spam(form.data['content'])

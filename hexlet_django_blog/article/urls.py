@@ -13,7 +13,6 @@ urlpatterns = [
     path('<int:id>/update/', ArticleFormEditView.as_view(), name='articles_update'),
     path('<int:id>/delete/', ArticleFormDeleteView.as_view(), name='articles_delete'),
     path('<int:id>/', ArticleView.as_view(), name='articles_show'),
-    # path('<int:article_id>/comments/<int:id>/', ArticleCommentsView.as_view()),
     path('create/', ArticleFormCreateView.as_view(), name='articles_create'),
     
 ]
