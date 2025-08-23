@@ -2,8 +2,11 @@
 
 {% block content %}
     <h1>Список статей</h1>
+    <a href="{% url 'articles_create' %}">Создать новую статью</a>
     {% for article in articles %}
         <p><a href="{% url 'articles_show' article.id %}">{{ article.name }}</a></p>
         <div>{{ article.body|slice:":200" }}</div>
+        <a href="{% url 'articles_update' article.id %}">Редактировать</a>
+        <a href="{% url 'articles_delete' article.id %}">Удалить</a>
     {% endfor %}
 {% endblock %}
